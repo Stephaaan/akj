@@ -3,3 +3,10 @@
 @import 'tailwindcss/utilities';
 
 @import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
+@font-face {
+    font-family: 'WorkSans-Light';
+    font-style: normal;
+    font-weight: 200;
+    src: url('https://fonts.googleapis.com/css?family=Work+Sans:200&display=swap');
+}

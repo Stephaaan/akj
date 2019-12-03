@@ -4,7 +4,7 @@ module.exports = {
   separator: ':',
   theme: {
     screens: {
-      sm: '640px',
+      sm: '700px',
       md: '768px',
       lg: '1024px',
       xl: '1280px',
@@ -13,9 +13,10 @@ module.exports = {
       transparent: 'transparent',
 
       black: '#000',
-      white: '#fff',
+      white: '#F9F5F9',
 
       textPink: '#af0d45',
+      bgPink: '#A70747',
 
       gray: {
         100: '#f7fafc',
@@ -148,6 +149,10 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
+      '72': '18rem',
+      '80': '20rem',
+      '88': '22rem',
+      '96': '24rem',
       '550': '550px'
     },
     backgroundColor: theme => theme('colors'),
@@ -254,6 +259,9 @@ module.exports = {
       ],
       worksans: [
         "work-sans", 'sans-serif'
+      ],
+      worksansLight: [
+        "WorkSans-Light", 'sans-serif'
       ]
     },
     fontSize: {
@@ -320,6 +328,7 @@ module.exports = {
       screen: '100vh',
     },
     maxWidth: {
+      xxs: '16rem',
       xs: '20rem',
       sm: '24rem',
       md: '28rem',

@@ -2,14 +2,14 @@
   <div class="font-worksans text-sm text-textPink">
     <div class="px-8 justify-between w-550 text  hidden md:flex">
       <div v-for="link in links" v-bind:key="link.link" :class="[active===link.link?activeClass:'']" class="cursor-pointer">
-        {{link.text}}
+        {{ link.text }}
       </div>
     </div>
     <div id="hamburger_icon" class="px-8 md:hidden flex items-end flex-col relative">
       <img class="w-12" src="~/assets/imgs/icons/hamburger.svg" alt="menu"></img>
-      <div id="hamburger_body" class="bg-white w-screen h-48 pt-8 pl-12 hidden flex-col absolute">
+      <div id="hamburger_body" class="bg-white w-screen h-48 pt-8 pl-8 hidden flex-col absolute right-0">
         <div v-for="link in links" v-bind:key="link.link" :class="[active===link.link?activeClass:'']" class="cursor-pointer">
-          {{link.text}}
+          {{ link.text }}
         </div>
       </div>
     </div>
