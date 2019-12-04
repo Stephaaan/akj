@@ -295,9 +295,11 @@ module.exports = {
     }),
     inset: {
       '0': '0',
+      '10': '10px',
       '40': '40px',
       '80': '80px',
       '100': '100px',
+      '160': '160px',
       '180': '180px',
       auto: 'auto',
     },
@@ -332,7 +334,8 @@ module.exports = {
       screen: '100vh',
     },
     maxWidth: {
-      xxs: '16rem',
+      '3xs':'12rem',
+      '2xs': '16rem',
       xs: '20rem',
       sm: '24rem',
       md: '28rem',

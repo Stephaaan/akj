@@ -1,10 +1,10 @@
 <template>
-  <div class="w-screen sm:h-550 h-80 relative" v-if="titleData">
-    <img  class="h-full w-full object-cover block" :src="titleData.foto" alt="Titulna fotka" srcset="">
-    <div class="absolute bottom-100 sm:bottom-180 right-40  left-8 text-white font-worksans text-3xl sm:text-6xl" v-html="titleData.nadpis">
-
+  <div v-if="titleData" class="w-screen sm:h-550 h-80 relative">
+    <img :src="titleData.foto" class="h-full w-full object-cover block" alt="Titulna fotka">
+    <div v-html="titleData.nadpis" class="absolute bottom-100 sm:bottom-180 right-10 sm:right-40 text-white font-worksans text-3xl sm:text-6xl" />
+    <div class="absolute font-worksansLight text-center hidden sm:bottom-100 sm:block text-white w-80 right-10 sm:right-40">
+      {{ titleData.podnadpis }}
     </div>
-
   </div>
 </template>
 <script>
@@ -18,6 +18,7 @@ export default {
     return this.$storyapi.get('cdn/stories/main-page/titulka', {
       version: 'draft'
     }).then((data) => {
+      // eslint-disable-next-line
       console.log(data)
       this.titleData = data.data.story.content
     })
