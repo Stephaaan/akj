@@ -7,7 +7,7 @@
     </div>
     <div id="hamburger_icon" class="px-8 md:hidden flex items-end flex-col relative">
       <img class="w-12" src="~/assets/imgs/icons/hamburger.svg" alt="menu"></img>
-      <div id="hamburger_body" class="bg-white w-screen h-48 pt-8 pl-8 hidden flex-col absolute right-0">
+      <div id="hamburger_body" class="bg-white w-screen pb-8 pt-20 pl-8 -z-1 top-0 hidden flex-col absolute right-0">
         <div v-for="link in links" v-bind:key="link.link" :class="[active===link.link?activeClass:'']" class="cursor-pointer">
           {{ link.text }}
         </div>
@@ -70,7 +70,7 @@ export default {
  display:flex;
 }
 #hamburger_body {
-  top: 3rem;
+  top: -1rem;
 }
 #hamburger_body > div {
   width: fit-content;
