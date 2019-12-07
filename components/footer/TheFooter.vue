@@ -1,7 +1,7 @@
 <template>
   <div class="w-screen font-semibold h-auto bg-bgPink text-white flex flex-col font-worksans pt-8">
     <div class="w-full h-auto text-center sm:text-4xl text-2xl mb-4">
-      Kde nás nájdete
+      {{ $t('footer.where_you_can_find_us') }}
     </div>
     <div class="w-full flex justify-center">
       <div class="w-2/3 md:w2/3 border-white border-b-2" />
@@ -61,24 +61,21 @@
 </template>
 
 <script>
+import { actionTypes } from '~/store/actionTypes.js'
 export default {
   data () {
     return {
       footerData: null
     }
   },
-  watch: {
-    // eslint-disable-next-line
-    footerData: newVal => console.log(newVal)
-  },
   mounted () {
-    return this.$storyapi.get('cdn/stories/main-page/footer', {
-      version: 'draft'
-    }).then((data) => {
-      this.footerData = data.data.story.content
-    })
-    // eslint-disable-next-line
-      .catch(err => console.log('data' + err))
+    this.$store.dispatch(actionTypes.GET_FOOTER_DATA, this)
+  },
+  created () {
+    this.$store.watch(
+      (state, getters) => getters.footer,
+      (newVal, oldVal) => { this.footerData = newVal }
+    )
   }
 }
 </script>

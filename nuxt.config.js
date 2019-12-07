@@ -23,12 +23,14 @@ export default {
   ** Global CSS
   */
   css: [
+    'node_modules/leaflet/dist/leaflet.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {src: '~/plugins/vue-markdown-simple.js', ssr: false}
+    {src: '~/plugins/vue-markdown-simple.js', ssr: false},
+    '~/plugins/i18n.js',
   ],
   /*
   ** Nuxt.js dev-modules

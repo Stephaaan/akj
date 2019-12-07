@@ -1,0 +1,13 @@
+{
+  "menu": {
+    "about": "O Nás",
+    "services": "Služby",
+    "carrer": "kariera",
+    "news": "aktuality",
+    "profile": "profil",
+    "contact": "kontakt"
+  },
+  "footer":{
+    "where_you_can_find_us": "Kde nás nájdete"
+  }
+}

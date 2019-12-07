@@ -1,7 +1,8 @@
 <template>
-  <div class="container">
+  <div>
     <TheHeader />
     <TheTitlePhoto />
+    <TheMap />
     <TheFooter />
   </div>
 </template>
@@ -10,11 +11,13 @@
 import TheHeader from '~/components/header/TheHeader.vue'
 import TheFooter from '~/components/footer/TheFooter.vue'
 import TheTitlePhoto from '~/components/title_photo/TheTitlePhoto.vue'
+import TheMap from '~/components/map/TheMap.vue'
 export default {
   components: {
     TheHeader,
     TheFooter,
-    TheTitlePhoto
+    TheTitlePhoto,
+    TheMap
   }
 }
 </script>

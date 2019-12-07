@@ -1,0 +1,13 @@
+{
+  "menu": {
+    "about": "About us",
+    "services": "Services",
+    "carrer": "Carrer",
+    "news": "News",
+    "profile": "Profile",
+    "contact": "Contact"
+  },
+  "footer":{
+    "where_you_can_find_us": "Where you can find us"
+  }
+}

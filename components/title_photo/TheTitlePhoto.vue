@@ -10,6 +10,7 @@
   </div>
 </template>
 <script>
+import { actionTypes } from '~/store/actionTypes.js'
 export default {
   data () {
     return {
@@ -17,15 +18,13 @@ export default {
     }
   },
   mounted () {
-    return this.$storyapi.get('cdn/stories/main-page/titulka', {
-      version: 'draft'
-    }).then((data) => {
-      // eslint-disable-next-line
-      console.log(data)
-      this.titleData = data.data.story.content
-    })
-    // eslint-disable-next-line
-      .catch(err => console.log('data' + err))
+    this.$store.dispatch(actionTypes.GET_TITLE_PAGE_DATA, this)
+  },
+  created () {
+    this.$store.watch(
+      (state, getters) => getters.title_page,
+      (newVal, oldVal) => { this.titleData = newVal }
+    )
   }
 }
 </script>
