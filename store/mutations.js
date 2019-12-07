@@ -17,5 +17,8 @@ export const mutations = {
   },
   [actionTypes.GET_SERVICES_SCROLLER_DATA_SUCCESS]: (state, titleData) => {
     state.services_scroller = titleData
+  },
+  [actionTypes.GET_PROFILES_SUCCESS]: (state, profilesData) => {
+    state.profiles = profilesData
   }
 }

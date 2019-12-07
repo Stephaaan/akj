@@ -6,7 +6,6 @@
     <div class="w-full flex justify-center">
       <div class="w-2/3 md:w2/3 border-white border-b-2" />
     </div>
-    <!-- TODO: CENTER ON PHONE -->
     <div v-if="footerData" class="w-100 flex flex-col sm:flex-row items-center justify-center my-8">
       <div class="flex flex-col sm:flex-row sm:mr-8">
         <div class="flex justify-center mb-4 sm:mb-0 sm:mr-8 items-center">

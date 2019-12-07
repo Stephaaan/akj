@@ -3,6 +3,7 @@
     <TheHeader />
     <TheTitlePhoto />
     <TheServicesScroller />
+    <TheProfiles />
     <TheMap />
     <TheFooter />
   </div>
@@ -14,13 +15,15 @@ import TheFooter from '~/components/footer/TheFooter.vue'
 import TheTitlePhoto from '~/components/title_photo/TheTitlePhoto.vue'
 import TheMap from '~/components/map/TheMap.vue'
 import TheServicesScroller from '~/components/services_scroller/TheServicesScroller.vue'
+import TheProfiles from '~/components/profiles/TheProfiles.vue'
 export default {
   components: {
     TheHeader,
     TheFooter,
     TheTitlePhoto,
     TheMap,
-    TheServicesScroller
+    TheServicesScroller,
+    TheProfiles
   }
 }
 </script>

@@ -4,6 +4,7 @@ module.exports = {
   separator: ':',
   theme: {
     screens: {
+      xs: '420px',
       sm: '700px',
       md: '768px',
       lg: '1024px',
@@ -17,18 +18,7 @@ module.exports = {
 
       textPink: '#af0d45',
       bgPink: '#A70747',
-
-      gray: {
-        100: '#f7fafc',
-        200: '#edf2f7',
-        300: '#e2e8f0',
-        400: '#cbd5e0',
-        500: '#a0aec0',
-        600: '#718096',
-        700: '#4a5568',
-        800: '#2d3748',
-        900: '#1a202c',
-      },
+      gray: '#757575',
       red: {
         100: '#fff5f5',
         200: '#fed7d7',
@@ -142,6 +132,7 @@ module.exports = {
       '10': '2.5rem',
       '12': '3rem',
       '16': '4rem',
+      '17': '4.25rem',
       '20': '5rem',
       '24': '6rem',
       '32': '8rem',

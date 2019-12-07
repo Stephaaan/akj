@@ -31,5 +31,18 @@ export const actions = {
         }
       }))
     })
+  },
+  [actionTypes.GET_PROFILES]: ({ commit, getters }, context) => {
+    return context.$storyapi.get('cdn/stories/', {
+      version: 'draft',
+      starts_with: getters.lang !== 'sk' ? `en/profily` : `profily`
+    }).then((data) => {
+      commit(actionTypes.GET_PROFILES_SUCCESS, data.data.stories.map((item) => {
+        return {
+          content: item.content,
+          slug: item.slug
+        }
+      }).reverse())
+    })
   }
 }

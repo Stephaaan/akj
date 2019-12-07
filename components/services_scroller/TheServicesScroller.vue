@@ -1,12 +1,12 @@
 <template>
-  <div class="max-w-full hidden sm:flex font-worksans font-medium items-center">
-    <img @click="swipeLeft" src="~/assets/imgs/icons/arrow_left.svg" alt="icon_left" class="h-8">
+  <div class="max-w-full hidden sm:flex font-worksans font-semibold items-center">
+    <img @click="swipeLeft" src="~/assets/imgs/icons/arrow_left.svg" alt="icon_left" class="h-6">
     <div id="scroller" ref="scroller" v-if="scrollerData" class="flex my-2 text-textPink text-sm overflow-hidden">
       <div v-bind:key="item.name" v-for="item in scrollerData" class="uppercase h-auto text-center flex justify-center items-center" style="min-width: 450px;">
         {{ item.name }}
       </div>
     </div>
-    <img @click="swipeRight" src="~/assets/imgs/icons/arrow_left.svg" alt="icon_right" class="h-8 icon_rotate">
+    <img @click="swipeRight" src="~/assets/imgs/icons/arrow_left.svg" alt="icon_right" class="h-6 icon_rotate">
   </div>
 </template>
 
