@@ -1,8 +1,8 @@
 <template>
   <div class="w-screen h-104 bg-black max-w">
-     <l-map :zoom="zoom" :center="center">
-      <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
-      <l-marker :lat-lng="marker"></l-marker>
+    <l-map :zoom="zoom" :center="center">
+      <l-tile-layer :url="url" :attribution="attribution" />
+      <l-marker :lat-lng="marker" />
     </l-map>
   </div>
 </template>

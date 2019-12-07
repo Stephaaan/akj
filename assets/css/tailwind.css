@@ -10,3 +10,6 @@
     font-weight: 200;
     src: url('https://fonts.googleapis.com/css?family=Work+Sans:200&display=swap');
 }
+* {
+  box-sizing: border-box;
+}

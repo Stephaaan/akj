@@ -5,9 +5,11 @@
         {{ $t(link.text) }}
       </div>
       <div class="language_selector relative hidden md:flex">
-        <div class="uppercase cursor-pointer">{{ $store.getters.lang }}</div>
+        <div class="uppercase cursor-pointer">
+          {{ $store.getters.lang }}
+        </div>
         <div v-on:click.prevent="switchLang($store.getters.lang === 'en'? 'sk' : 'en')" class="language_selector_inner w-5 h-5 uppercase hidden cursor-pointer">
-          {{ $store.getters.lang === 'en'? 'sk' : 'en'}}
+          {{ $store.getters.lang === 'en'? 'sk' : 'en' }}
         </div>
       </div>
     </div>
@@ -18,9 +20,11 @@
           {{ $t(link.text) }}
         </div>
         <div class="flex">
-          <div class="uppercase cursor-pointer font-bold mr-2">{{ $store.getters.lang }}</div>
+          <div class="uppercase cursor-pointer font-bold mr-2">
+            {{ $store.getters.lang }}
+          </div>
           <div v-on:click.prevent="switchLang($store.getters.lang === 'en'? 'sk' : 'en')" class="uppercase cursor-pointer font-light">
-            {{ $store.getters.lang === 'en'? 'sk' : 'en'}}
+            {{ $store.getters.lang === 'en'? 'sk' : 'en' }}
           </div>
         </div>
       </div>
@@ -71,15 +75,12 @@ export default {
     active: {
       immediate: true,
       handler: (val, oldVal) => {
-        // eslint-disable-next-line
-        console.log(val)
       }
     }
   },
   methods: {
     // eslint-disable-next-line
     switchLang: function (lang) {
-      console.log('switchLang, ', lang)
       this.$store.commit(actionTypes.SET_LANG, lang)
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen font-semibold h-auto bg-bgPink text-white flex flex-col font-worksans pt-8">
+  <div class="w-full font-semibold h-auto bg-bgPink text-white flex flex-col font-worksans pt-8">
     <div class="w-full h-auto text-center sm:text-4xl text-2xl mb-4">
       {{ $t('footer.where_you_can_find_us') }}
     </div>
