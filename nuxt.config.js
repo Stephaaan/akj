@@ -23,7 +23,7 @@ export default {
   ** Global CSS
   */
   css: [
-    '~/node_modules/leaflet/dist/leaflet.css'
+    'leaflet/dist/leaflet.css'
   ],
   /*
   ** Plugins to load before mounting the App
