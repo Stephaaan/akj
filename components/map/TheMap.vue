@@ -31,7 +31,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
   .w-screen {
     width: 100vw;
     max-width: 100%;

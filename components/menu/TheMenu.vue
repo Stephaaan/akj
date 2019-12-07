@@ -17,6 +17,12 @@
         <div v-for="link in links" v-bind:key="link.link" :class="[active===link.link?activeClass:'']" class="cursor-pointer">
           {{ $t(link.text) }}
         </div>
+        <div class="flex">
+          <div class="uppercase cursor-pointer font-bold mr-2">{{ $store.getters.lang }}</div>
+          <div v-on:click.prevent="switchLang($store.getters.lang === 'en'? 'sk' : 'en')" class="uppercase cursor-pointer font-light">
+            {{ $store.getters.lang === 'en'? 'sk' : 'en'}}
+          </div>
+        </div>
       </div>
     </div>
   </div>
