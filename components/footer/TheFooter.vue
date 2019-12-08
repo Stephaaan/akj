@@ -29,7 +29,7 @@
             <img class="h-8 mr-2" src="~/assets/imgs/icons/facebook.png" alt="" srcset="">
           </div>
           <div class="flex items-center">
-            <a :href="footerData.facebook_link.url" class="cursor-pointer">{{ footerData.facebook_nazov_stranky }}</a>
+            <a :href="footerData.facebook_link.url" target="_blank" class="cursor-pointer">{{ footerData.facebook_nazov_stranky }}</a>
           </div>
         </div>
         <div class="flex flex-row my-2">

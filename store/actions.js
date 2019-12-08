@@ -44,5 +44,13 @@ export const actions = {
         }
       }).reverse())
     })
+  },
+  [actionTypes.GET_QUOTE]: ({ commit, getters }, context) => {
+    const link = getters.lang !== 'sk' ? `cdn/stories/${getters.lang}/main-page/citat` : `cdn/stories/main-page/citat`
+    return context.$storyapi.get(link, {
+      version: 'draft'
+    }).then((data) => {
+      commit(actionTypes.GET_QUOTE_SUCCESS, data.data.story.content)
+    })
   }
 }

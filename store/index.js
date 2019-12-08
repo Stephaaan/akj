@@ -14,7 +14,8 @@ const state = {
   footer: {},
   title_page: {},
   services_scroller: [],
-  profiles: []
+  profiles: [],
+  quote: {}
 }
 
 const store = new Vuex.Store({

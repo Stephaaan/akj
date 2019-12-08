@@ -19,6 +19,7 @@ module.exports = {
       textPink: '#af0d45',
       bgPink: '#A70747',
       gray: '#757575',
+      lightGray: '#606060',
       red: {
         100: '#fff5f5',
         200: '#fed7d7',
@@ -255,6 +256,9 @@ module.exports = {
       ],
       worksansLight: [
         "WorkSans-Light", 'sans-serif'
+      ],
+      satisfy: [
+        'Satisfy', 'sans-serif'
       ]
     },
     fontSize: {
@@ -292,6 +296,8 @@ module.exports = {
       '10': '10px',
       '40': '40px',
       '16': '16px',
+      '20': '20px',
+      '60': '60px',
       '80': '80px',
       '100': '100px',
       '160': '160px',

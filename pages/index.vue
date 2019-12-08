@@ -3,6 +3,7 @@
     <TheHeader />
     <TheTitlePhoto />
     <TheServicesScroller />
+    <TheTitleBanner />
     <TheProfiles />
     <TheMap />
     <TheFooter />
@@ -16,6 +17,7 @@ import TheTitlePhoto from '~/components/title_photo/TheTitlePhoto.vue'
 import TheMap from '~/components/map/TheMap.vue'
 import TheServicesScroller from '~/components/services_scroller/TheServicesScroller.vue'
 import TheProfiles from '~/components/profiles/TheProfiles.vue'
+import TheTitleBanner from '~/components/title_banner/TheTitleBanner.vue'
 export default {
   components: {
     TheHeader,
@@ -23,7 +25,8 @@ export default {
     TheTitlePhoto,
     TheMap,
     TheServicesScroller,
-    TheProfiles
+    TheProfiles,
+    TheTitleBanner
   }
 }
 </script>

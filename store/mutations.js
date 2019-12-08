@@ -20,5 +20,8 @@ export const mutations = {
   },
   [actionTypes.GET_PROFILES_SUCCESS]: (state, profilesData) => {
     state.profiles = profilesData
+  },
+  [actionTypes.GET_QUOTE_SUCCESS]: (state, quoteData) => {
+    state.quote = quoteData
   }
 }

@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 @import 'leaflet/dist/leaflet.css';
 @import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
 @font-face {
     font-family: 'WorkSans-Light';
     font-style: normal;
