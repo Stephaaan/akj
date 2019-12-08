@@ -1,5 +1,5 @@
 <template>
-  <div class="font-worksans">
+  <div class="font-worksans whitespace-pre">
     <div v-bind:key="profile.slug" v-for="profile in profiles" class="flex to-reverse items-center px-4 sm:px-20 xl:px-40 py-8 relative">
       <img :src="profile.content.fotka" alt="profile_photo" class="h-24 md: h-56">
       <div class="items-center xs:ml-8 h-20 sm:h-48 skew overflow-hidden">
@@ -11,7 +11,7 @@
         </div>
         <div v-html="markdownToHTML(profile.content.Text)" class="w-full h-17 hidden xs:block sm:w-3/4 text-gray text-xs sm:text-base sm:h-24 text-overflow-ellipsis overflow-hidden after-dots" />
       </div>
-      <div class="absolute to-center -z-1 w-full h-2/3 left-0"/>
+      <div class="absolute to-center -z-1 w-full h-2/3 left-0" />
     </div>
   </div>
 </template>

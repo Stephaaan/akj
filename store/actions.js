@@ -20,7 +20,7 @@ export const actions = {
   [actionTypes.GET_SERVICES_SCROLLER_DATA]: ({ commit, getters }, context) => {
     return context.$storyapi.get('cdn/stories/', {
       version: 'draft',
-      starts_with: getters.lang !== 'sk' ? `en/sluzby` : `sluzby`
+      starts_with: getters.lang !== 'sk' ? `en/services` : `services`
     }).then((data) => {
       commit(actionTypes.GET_SERVICES_SCROLLER_DATA_SUCCESS, data.data.stories.map((item) => {
         return {
