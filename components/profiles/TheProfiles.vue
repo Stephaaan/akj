@@ -1,5 +1,5 @@
 <template>
-  <div class="font-worksans whitespace-pre">
+  <div class="font-worksans">
     <div v-bind:key="profile.slug" v-for="profile in profiles" class="flex to-reverse items-center px-4 sm:px-20 xl:px-40 py-8 relative">
       <img :src="profile.content.fotka" alt="profile_photo" class="h-24 md: h-56">
       <div class="items-center xs:ml-8 h-20 sm:h-48 skew overflow-hidden">

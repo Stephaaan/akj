@@ -21,15 +21,11 @@
   </div>
 </template>
 <script>
-import { actionTypes } from '~/store/actionTypes.js'
 export default {
   data () {
     return {
       settings: null
     }
-  },
-  mounted () {
-    this.$store.dispatch(actionTypes.GET_TITLE_PAGE_DATA, this)
   },
   created () {
     this.$store.watch(
