@@ -20,14 +20,14 @@ export default {
       marker: [0, 0]
     }
   },
-  mounted () {
-    return this.$storyapi.get('cdn/stories/main-page/mapa', {
-      version: 'draft'
-    }).then((data) => {
-      const { Latitude, Longtitude } = data.data.story.content
-      this.center = [Latitude, Longtitude]
-      this.marker = [Latitude, Longtitude]
-    })
+  created () {
+    this.$store.watch(
+      (state, getters) => getters.settings,
+      (newVal, oldVal) => {
+        this.center = [newVal.latitude, newVal.longtitude]
+        this.marker = [newVal.latitude, newVal.longtitude]
+      }
+    )
   }
 }
 </script>

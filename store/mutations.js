@@ -9,11 +9,8 @@ export const mutations = {
     state.page_settings.lang = lang
     window.location.reload()
   },
-  [actionTypes.GET_FOOTER_DATA_SUCCESS]: (state, footerData) => {
-    state.footer = footerData
-  },
-  [actionTypes.GET_TITLE_PAGE_DATA_SUCCESS]: (state, titleData) => {
-    state.title_page = titleData
+  [actionTypes.GET_SETTINGS_SUCCESS]: (state, settings) => {
+    state.page_settings.settings = settings
   },
   [actionTypes.GET_SERVICES_SCROLLER_DATA_SUCCESS]: (state, titleData) => {
     state.services_scroller = titleData
@@ -21,7 +18,7 @@ export const mutations = {
   [actionTypes.GET_PROFILES_SUCCESS]: (state, profilesData) => {
     state.profiles = profilesData
   },
-  [actionTypes.GET_QUOTE_SUCCESS]: (state, quoteData) => {
-    state.quote = quoteData
+  [actionTypes.GET_HOME_SUCCESS]: (state, homeData) => {
+    state.home = homeData
   }
 }

@@ -9,13 +9,12 @@ Vue.config.devtools = true
 
 const state = {
   page_settings: {
-    lang: window.localStorage.getItem('lang') || 'sk'
+    lang: window.localStorage.getItem('lang') || 'sk',
+    settings: {}
   },
-  footer: {},
-  title_page: {},
+  home: {},
   services_scroller: [],
-  profiles: [],
-  quote: {}
+  profiles: []
 }
 
 const store = new Vuex.Store({
