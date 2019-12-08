@@ -1,8 +1,8 @@
 <template>
   <div class="font-worksans text-sm uppercase text-textPink">
     <div class="px-8 justify-between w-550 text  hidden md:flex">
-      <div v-for="link in links" v-bind:key="link.link" :class="[active===link.link?activeClass:'']" class="cursor-pointer">
-        {{ $t(link.text) }}
+      <div v-for="link in links" v-bind:key="link.link" class="cursor-pointer">
+        <nuxt-link :to="link.link">{{ $t(link.text) }}</nuxt-link>
       </div>
       <div class="language_selector relative hidden md:flex">
         <div class="uppercase cursor-pointer">
@@ -16,8 +16,8 @@
     <div id="hamburger_icon" class="px-8 md:hidden flex items-end flex-col relative">
       <img class="w-12" src="~/assets/imgs/icons/hamburger.svg" alt="menu"></img>
       <div id="hamburger_body" class="bg-white w-screen pb-8 pt-24 pl-8 -z-1 top-0 hidden flex-col absolute right-0">
-        <div v-for="link in links" v-bind:key="link.link" :class="[active===link.link?activeClass:'']" class="cursor-pointer">
-          {{ $t(link.text) }}
+        <div v-for="link in links" v-bind:key="link.link"  class="cursor-pointer">
+          <nuxt-link :to="link.link">{{ $t(link.text) }}</nuxt-link>
         </div>
         <div class="flex">
           <div class="uppercase cursor-pointer font-bold mr-2">
@@ -34,12 +34,6 @@
 <script>
 import { actionTypes } from '~/store/actionTypes'
 export default {
-  props: {
-    active: {
-      type: String,
-      required: true
-    }
-  },
   data: () => {
     return {
       activeClass: 'border-textPink border-b border-solid',
@@ -71,13 +65,6 @@ export default {
       ]
     }
   },
-  watch: {
-    active: {
-      immediate: true,
-      handler: (val, oldVal) => {
-      }
-    }
-  },
   methods: {
     // eslint-disable-next-line
     switchLang: function (lang) {
@@ -102,4 +89,5 @@ export default {
   left: 0;
   display:flex;
 }
+
 </style>

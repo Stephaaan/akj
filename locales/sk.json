@@ -9,5 +9,8 @@
   },
   "footer":{
     "where_you_can_find_us": "Kde nás nájdete"
+  },
+  "profiles": {
+    "title": "Profil"
   }
 }

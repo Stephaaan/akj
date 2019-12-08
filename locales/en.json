@@ -9,5 +9,8 @@
   },
   "footer":{
     "where_you_can_find_us": "Where you can find us"
+  },
+  "profiles": {
+    "title": "Profile"
   }
 }

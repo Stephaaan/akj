@@ -51,6 +51,10 @@ export default {
       cacheProvider: 'memory'
     }]
   ],
+  router: {
+    linkActiveClass: 'border-textPink border-b border-solid',
+    linkExactActiveClass: 'border-textPink border-b border-solid',
+  },
   /*
   ** Build configuration
   */
