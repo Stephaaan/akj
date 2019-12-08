@@ -1,6 +1,6 @@
 <template>
   <div class="w-full px-8 sm:px-16 xl:px-20 flex flex-col my-8">
-    <div v-if="quote" class="w-full text-center text-gray font-worksans text-sm sm:text-lg">
+    <div v-if="quote" class="w-full mb-8 text-center text-gray font-worksans text-sm sm:text-lg">
       {{quote.popis_stranky}}
     </div>
     <div class="flex flex-col-reverse lg:flex-row justify-between">
