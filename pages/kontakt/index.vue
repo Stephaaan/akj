@@ -22,14 +22,29 @@
         </div>
         <div class="flex flex-col h-full w-content mb-8 mdx:mb-0">
           <div class="max-w-3xs mdx:max-w-2xs font-worksansLight text-gray font-hairline text-base mdx:text-xl text-center">
-            <div class="text-left">
-                {{ $t("contact.fields.ico") }}:{{ settings.ico }}
+            <div class="flex">
+                <div class="w-16  mdx:w-20 text-left font-bold">
+                  {{ $t("contact.fields.ico") }}:
+                </div>
+                <div>
+                  {{ settings.ico }}
+                </div>
             </div>
-            <div class="text-left">
-                {{ $t("contact.fields.dic") }}:{{ settings.dic }}
+            <div class="flex">
+                <div class="w-16 mdx:w-20 text-left font-bold">
+                  {{ $t("contact.fields.dic") }}:
+                </div>
+                <div>
+                  {{ settings.dic }}
+                </div>
             </div>
-             <div class="text-left">
-                {{ $t("contact.fields.skype") }}:{{ settings.skype }}
+             <div class="flex">
+                <div class="w-16  mdx:w-20 text-left font-bold">
+                  {{ $t("contact.fields.skype") }}:
+                </div>
+                <div>
+                  {{ settings.skype }}
+                </div>
             </div>
           </div>
         </div>
