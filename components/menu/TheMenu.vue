@@ -44,27 +44,27 @@ export default {
       links: [
         {
           text: 'menu.about',
-          link: 'o-nas'
+          link: '/o-nas'
         },
         {
           text: 'menu.services',
-          link: 'sluzby'
+          link: '/sluzby'
         },
         {
           text: 'menu.carrer',
-          link: 'kariera'
+          link: '/kariera'
         },
         {
           text: 'menu.news',
-          link: 'aktuality'
+          link: '/aktuality'
         },
         {
           text: 'menu.profile',
-          link: 'profil'
+          link: '/profil'
         },
         {
           text: 'menu.contact',
-          link: 'kontakt'
+          link: '/kontakt'
         }
       ]
     }
