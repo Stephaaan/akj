@@ -10,7 +10,7 @@ Vue.config.devtools = true
 const state = {
   page_settings: {
     lang: window.localStorage.getItem('lang') || 'sk',
-    settings: {}
+    settings: null
   },
   home: {},
   services_scroller: [],

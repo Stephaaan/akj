@@ -4,11 +4,13 @@
     <TheTitlePhoto />
     <TheServicesScroller />
     <nuxt />
+    <TheMap class="mb-8"/>
     <TheFooter />
   </div>
 </template>
 
 <script>
+import TheMap from '~/components/map/TheMap.vue'
 import TheHeader from '~/components/header/TheHeader.vue'
 import TheFooter from '~/components/footer/TheFooter.vue'
 import TheTitlePhoto from '~/components/title_photo/TheTitlePhoto.vue'
@@ -20,7 +22,8 @@ export default {
     TheHeader,
     TheFooter,
     TheTitlePhoto,
-    TheServicesScroller
+    TheServicesScroller,
+    TheMap
   },
   mounted () {
     this.$store.dispatch(actionTypes.GET_SETTINGS, this.$storyapi)

@@ -7,6 +7,7 @@ module.exports = {
       xs: '420px',
       sm: '700px',
       md: '768px',
+      mdx: '840px',
       lg: '1024px',
       xl: '1280px',
     },
@@ -234,14 +235,14 @@ module.exports = {
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
+        '"Noto Color Emoji"'
       ],
       serif: [
         'Georgia',
         'Cambria',
         '"Times New Roman"',
         'Times',
-        'serif',
+        'serif'
       ],
       mono: [
         'Menlo',
@@ -252,10 +253,10 @@ module.exports = {
         'monospace',
       ],
       worksans: [
-        "work-sans", 'sans-serif'
+        'work-sans', 'sans-serif'
       ],
       worksansLight: [
-        "WorkSans-Light", 'sans-serif'
+        'WorkSans-Light', 'sans-serif'
       ],
       satisfy: [
         'Satisfy', 'sans-serif'
@@ -272,6 +273,7 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      title: '2.25rem'
     },
     fontWeight: {
       hairline: '100',
@@ -431,10 +433,11 @@ module.exports = {
       '11/12': '91.666667%',
       full: '100%',
       screen: '100vw',
+      content: 'fit-content'
     }),
     zIndex: {
       auto: 'auto',
-      '-1':'-1',
+      '-1': '-1',
       '0': '0',
       '10': '10',
       '20': '20',

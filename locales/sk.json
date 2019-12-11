@@ -12,5 +12,14 @@
   },
   "profiles": {
     "title": "Profil"
+  },
+  "contact": {
+    "workplace": "Pracovisko",
+    "fields": {
+      "ico": "IČO",
+      "dic": "DIČ",
+      "skype": "Skype"
+    },
+    "title": "Kontakt"
   }
 }
