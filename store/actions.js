@@ -30,8 +30,8 @@ export const actions = {
       }))
     })
   },
-  [actionTypes.GET_PROFILES]: ({ commit, getters }, context) => {
-    return context.$storyapi.get('cdn/stories/', {
+  [actionTypes.GET_PROFILES]: ({ commit, getters }, $storyapi) => {
+    return $storyapi.get('cdn/stories/', {
       version: 'draft',
       starts_with: getters.lang !== 'sk' ? `en/profiles` : `profiles`
     }).then((data) => {
@@ -41,6 +41,14 @@ export const actions = {
           slug: item.slug
         }
       }).reverse())
+    })
+  },
+  [actionTypes.GET_ABOUT_PAGE]: ({ commit, getters }, $storyapi) => {
+    const link = getters.lang !== 'sk' ? `cdn/stories/${getters.lang}/about/` : `cdn/stories/about/`
+    return $storyapi.get(link, {
+      version: 'draft'
+    }).then((data) => {
+      commit(actionTypes.GET_ABOUT_PAGE_SUCCESS, data.data.story.content)
     })
   }
 }

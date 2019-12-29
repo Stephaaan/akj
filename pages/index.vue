@@ -17,6 +17,7 @@ export default {
   },
   created () {
     this.$store.dispatch(actionTypes.GET_HOME, this.$storyapi)
+    this.$store.dispatch(actionTypes.GET_PROFILES, this.$storyapi)
   }
 }
 </script>

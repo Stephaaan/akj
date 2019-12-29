@@ -14,7 +14,7 @@ export default {
     TheProfiles
   },
   mounted () {
-    this.$store.dispatch(actionTypes.GET_PROFILES, this)
+    this.$store.dispatch(actionTypes.GET_PROFILES, this.$storyapi)
   }
 }
 </script>
