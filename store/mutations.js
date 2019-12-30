@@ -23,5 +23,8 @@ export const mutations = {
   },
   [actionTypes.GET_ABOUT_PAGE_SUCCESS]: (state, aboutData) => {
     state.about = aboutData
+  },
+  [actionTypes.GET_SERVICES_SUCCESS]: (state, services) => {
+    state.services = services
   }
 }

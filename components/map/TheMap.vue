@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen h-104 bg-black max-w">
+  <div v-if="content" v-editable="content" class="w-screen h-104 bg-black max-w">
     <l-map :zoom="zoom" :center="center">
       <l-tile-layer :url="url" :attribution="attribution" />
       <l-marker :lat-lng="marker" />
@@ -17,7 +17,8 @@ export default {
       center: [0, 0],
       url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
       attribution: '',
-      marker: [0, 0]
+      marker: [0, 0],
+      content: {}
     }
   },
   created () {
@@ -26,6 +27,7 @@ export default {
       (newVal, oldVal) => {
         this.center = [newVal.latitude, newVal.longtitude]
         this.marker = [newVal.latitude, newVal.longtitude]
+        this.content = newVal
       }
     )
   }

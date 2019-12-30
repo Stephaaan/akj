@@ -4,5 +4,7 @@ export const getters = {
   services_scroller: state => state.services_scroller,
   profiles: state => state.profiles,
   home: state => state.home,
-  about: state => state.about
+  about: state => state.about,
+  services: state => state.services,
+  single_service: state => state.single_service
 }

@@ -15,8 +15,8 @@ module.exports = {
       transparent: 'transparent',
 
       black: '#000',
-      white: '#F9F5F9',
-
+      white: '#ffffff',
+      bgLight: '#f0f0f0',
       textPink: '#af0d45',
       bgPink: '#A70747',
       gray: '#757575',

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-8 sm:px-16 xl:px-20 flex flex-col my-8">
+  <div v-if="home" v-editable="home" class="w-full px-8 sm:px-16 xl:px-20 flex flex-col my-8">
     <div v-if="home" class="w-full mb-8 text-center text-gray font-worksans text-sm sm:text-lg">
       {{ home.page_description }}
     </div>

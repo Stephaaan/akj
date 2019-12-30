@@ -1,10 +1,12 @@
 <template>
   <div>
     <div v-if="about">
-      <div class="w-full mt-8 text-center text-textPink text-title">
-        {{ about.title }}
+      <div v-editable="about">
+        <div class="w-full mt-8 text-center text-textPink text-title">
+          {{ about.title }}
+        </div>
+        <div v-html="markdownToHTML(about.text)" class="w-full px-20  my-8 py-4 font-worksans text-center text-gray" />
       </div>
-      <div v-html="markdownToHTML(about.text)" class="w-full px-20  my-8 py-4 font-worksans text-center text-gray" />
     </div>
     <ThePhotoGrid />
   </div>

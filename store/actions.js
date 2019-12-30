@@ -24,7 +24,7 @@ export const actions = {
     }).then((data) => {
       commit(actionTypes.GET_SERVICES_SCROLLER_DATA_SUCCESS, data.data.stories.map((item) => {
         return {
-          name: item.content.Nadpis,
+          name: item.content.heading,
           slug: item.slug
         }
       }))
@@ -49,6 +49,14 @@ export const actions = {
       version: 'draft'
     }).then((data) => {
       commit(actionTypes.GET_ABOUT_PAGE_SUCCESS, data.data.story.content)
+    })
+  },
+  [actionTypes.GET_SERVICES]: ({ commit, getters }, $storyapi) => {
+    return $storyapi.get('cdn/stories/', {
+      version: 'draft',
+      starts_with: getters.lang !== 'sk' ? `en/services` : `services`
+    }).then((data) => {
+      commit(actionTypes.GET_SERVICES_SUCCESS, data.data.stories.map(({ slug, content }) => ({ slug, content })))
     })
   }
 }

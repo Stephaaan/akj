@@ -15,7 +15,9 @@ const state = {
   home: {},
   services_scroller: [],
   profiles: [],
-  about: {}
+  about: {},
+  services: [],
+  single_service: {}
 }
 
 const store = new Vuex.Store({
