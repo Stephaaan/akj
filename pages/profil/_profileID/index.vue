@@ -1,23 +1,21 @@
 <template>
   <div v-if="content" class="mb-8">
     <div v-editable="content">
-      <div class="w-full font-worksans font-bold flex justify-center text-textPink text-title my-4">
-        {{ content.name }}
-      </div>
-      <div class="w-full flex justify-center font-worksans text-2xl text-textPink my-4">
-        {{ content.profession }}
-      </div>
-      <div class="relative flex linear-bg">
-        <!--<div class="linear-bg w-full h-88 absolute left-0 top-10 -z-1"></div> -->
-        <div v-html="markdownToHTML(content.text)" class="w-full px-20  my-8 py-4 font-worksans" />
-        <img :src="content.photo" class="h-104" alt="profile photo" >
-      </div>
+      <!-- eslint-disable-next-line -->
+      <component v-for="(blok, index) in content.text" v-bind:is="blok.component" :blok="blok" :key="index"/>
     </div>
   </div>
 </template>
 <script>
 import marked from 'marked'
+import Heading from '~/components/heading/Heading'
+import TextBlock from '~/components/TextBlock/TextBlock'
+import TextBlockPhoto from '~/components/TextBlockPhoto/TextBlockPhoto'
 export default {
+  components: {
+    // eslint-disable-next-line
+    Heading, TextBlock, TextBlockPhoto
+  },
   data () {
     return {
       content: null
@@ -29,6 +27,7 @@ export default {
     this.$storyapi.get(link, {
       version: 'draft'
     }).then((data) => {
+      console.log(data.data.story.content)
       this.content = data.data.story.content
     })
   },

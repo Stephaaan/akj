@@ -6,13 +6,12 @@
     <div class="w-full flex justify-center">
       <div class="w-2/3 md:w2/3 border-white border-b-2" />
     </div>
-    <div v-if="settings" class="w-100 flex flex-col sm:flex-row items-center justify-center my-8">
-      <div v-editable="settings">
+    <div v-if="settings" v-editable="settings" class="w-100 flex flex-col sm:flex-row items-center justify-center my-8">
         <div class="flex flex-col sm:flex-row sm:mr-8">
           <div class="flex justify-center mb-4 sm:mb-0 sm:mr-8 items-center">
             <img class="h-20" src="~/assets/imgs/icons/location.png" alt="location">
           </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col items-center">
             <div class="max-w-3xs sm:max-w-2xs text-base sm:text-xl text-center">
               {{ settings.company_name }}
             </div>
@@ -49,7 +48,6 @@
               <a :href="`mailto:${settings.email}`" class="cursor-pointer">{{ settings.email }}</a>
             </div>
           </div>
-        </div>
       </div>
     </div>
     <div class="w-full flex justify-center">

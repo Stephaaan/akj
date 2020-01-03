@@ -1,16 +1,20 @@
 <template>
     <div v-if="content">
         <div v-editable="content">
-            <div class="w-full mt-8 text-center text-textPink text-title">
-                {{ content.heading }}
-            </div>
-            <div v-html="markdownToHTML(content.text)" class="w-full px-20  my-8 py-4 font-worksans text-center" />
+          <!-- eslint-disable-next-line vue/require-component-is -->
+          <component v-for="(block, index) in content.text" v-bind:key="index" v-bind:is="block.component" :blok="block" />
         </div>
     </div>
 </template>
 <script>
 import marked from 'marked'
+import TextBlock from '~/components/TextBlock/TextBlock'
+import Heading from '~/components/heading/Heading'
 export default {
+  components: {
+    // eslint-disable-next-line
+    TextBlock, Heading
+  },
   data () {
     return {
       content: null
