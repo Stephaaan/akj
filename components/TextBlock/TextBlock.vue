@@ -1,12 +1,14 @@
 <template>
-  <div v-editable="blok" :style="`background-color:${background ? background : blok.color}`" v-html="html" class="TextBlock text-center p-4 whitespace-normal" />
+  <div v-editable="blok" :style="`background-color:${background ? background : blok.color}; height: ${height ? height: 'auto'}; ${padding && 'padding: ' + padding}`" v-html="html" class="TextBlock text-center p-4 whitespace-normal" />
 </template>
 <script>
 import { markedToHTML } from '~/helpers/marked'
 export default {
   props: {
     blok: Object,
-    background: String
+    background: String,
+    height: String,
+    padding: String
   },
   computed: {
     html () {
@@ -22,6 +24,10 @@ ul > li {
 }
 strong {
   color: #757575;
+}
+p {
+  overflow-y: hidden;
+  text-overflow: ellipsis;
 }
 ul li::before {
   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */

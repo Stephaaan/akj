@@ -21,6 +21,7 @@ module.exports = {
       bgPink: '#A70747',
       gray: '#757575',
       lightGray: '#606060',
+      totalLightGray: '#cecccc',
       red: {
         100: '#fff5f5',
         200: '#fed7d7',
@@ -260,7 +261,7 @@ module.exports = {
         'work-sans', 'sans-serif'
       ],
       worksansLight: [
-        'WorkSans-Light', 'sans-serif'
+        'Open Sans', 'sans-serif'
       ],
       satisfy: [
         'Satisfy', 'sans-serif'

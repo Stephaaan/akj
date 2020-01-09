@@ -24,5 +24,8 @@
   },
   "services": {
     "title": "Services"
+  },
+  "news": {
+    "title": "News"
   }
 }

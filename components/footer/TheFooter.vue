@@ -23,7 +23,7 @@
         <div class="w-full sm:hidden  my-8 flex justify-center">
           <div class="w-2/3 md:w2/3 border-white border-b-2" />
         </div>
-        <div class="flex h-full flex-col justify-around font-hairline">
+        <div class="flex h-full flex-col  font-worksansLight justify-around font-hairline">
           <div class="flex flex-row my-2">
             <div>
               <img class="h-8 mr-2" src="~/assets/imgs/icons/facebook.png" alt="" srcset="">
@@ -53,7 +53,7 @@
     <div class="w-full flex justify-center">
       <div class="w-2/3 md:w2/3 border-white border-b-2" />
     </div>
-    <div v-if="settings" class="font-hairline w-full flex justify-center my-8">
+    <div v-if="settings" class="font-hairline font-worksansLight w-full flex justify-center my-8">
       {{ settings.copyright }}
     </div>
   </div>

@@ -4,7 +4,7 @@
         <div class="w-2/3 h-32 sm:h-64 mb-4 overflow-hidden whitespace-no-wrap text-overflow-dots">
           <div>
               <!-- eslint-disable-next-line -->
-              <component v-for="(item, index) in blok.text" :key="index" :blok="item" :is="item.component" :background="blok.backgroundColor.color" margin="1rem" />
+              <component v-for="(item, index) in blok.text" :key="index" :blok="item" :is="item.component" :background="blok.backgroundColor.color" margin="1rem" padding="0px"/>
           </div>
         </div>
       </div>
