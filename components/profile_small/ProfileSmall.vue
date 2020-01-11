@@ -1,8 +1,8 @@
 <template>
   <nuxt-link :to="'/profil/' + slug">
     <div v-editable="blok" class="flex h-48 sm:h-72 root items-center relative mb-4">
-      <div :class="!blok.reversed ? 'justify-start' : 'justify-end'" class="w-full flex mb-2" :style="`background-color: ${blok.backgroundColor.color}` ">
-        <div class="w-2/3 sm:w-3/4 h-32 sm:h-64 mb-4 overflow-hidden whitespace-no-wrap text-overflow-dots text-right skewer" :style="blok.reversed && 'text-align: left'">
+      <div :class="!blok.reversed ? 'justify-start' : 'justify-end'" :style="`background-color: ${blok.backgroundColor.color}` " class="w-full flex mb-2">
+        <div :style="blok.reversed && 'text-align: left'" class="w-2/3 sm:w-3/4 h-32 sm:h-64 mb-4 overflow-hidden whitespace-no-wrap text-overflow-dots text-right skewer">
           <div>
             <div class="w-full mt-8 text-textPink text-base xs:text-2xl sm:text-3xl">
               {{ blok.name }}
@@ -11,7 +11,7 @@
               {{ blok.profesion }}
             </div>
             <div class="whitespace-normal text-sm overflow-hidden break-normal text-overflow-ellipsis h-32 hidden sm:block mr-4 text-gray">
-              {{blok.text}}
+              {{ blok.text }}
             </div>
           </div>
         </div>
