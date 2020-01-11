@@ -88,7 +88,6 @@ export default {
     }
   },
   mounted () {
-    console.log('mounted')
     this.$store.watch(
       (state, getters) => getters.settings,
       (newVal, oldVal) => { this.settings = newVal }

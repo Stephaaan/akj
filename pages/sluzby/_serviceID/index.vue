@@ -27,7 +27,6 @@ export default {
       version: 'draft'
     }).then((data) => {
       this.content = data.data.story.content
-      console.log('content', this.content)
     })
   },
   methods: {

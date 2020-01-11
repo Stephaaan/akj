@@ -26,7 +26,6 @@ export default {
       version: 'draft'
     }).then((data) => {
       this.carrer = data.data.story.content
-      console.log(this.carrer)
     })
   },
   methods: {
