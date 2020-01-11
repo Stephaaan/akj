@@ -8,9 +8,6 @@ export default {
   props: {
     blok: Object,
     margin: String
-  },
-  mounted () {
-    console.log(this.blok)
   }
 }
 </script>

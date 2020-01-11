@@ -2,7 +2,7 @@
   <div class="font-worksans mb-8" v-if="profiles">
     <div v-for="(profile, index) in profiles" :key="index">
       <!-- eslint-disable-next-line -->
-     <component v-if="profile.content.smallProfile"  :blok="profile.content.smallProfile[0]" :is="profile.content.smallProfile[0].component"/>
+     <component v-if="profile.content.smallProfile"  :blok="profile.content.smallProfile[0]" :is="profile.content.smallProfile[0].component" :slug="profile.slug"/>
     </div>
   </div>
 </template>
@@ -24,7 +24,6 @@ export default {
       (state, getters) => getters.profiles,
       (newVal, oldVal) => {
         this.profiles = newVal
-        console.log('profiles', newVal[0].content.smallProfile[0])
       }
     )
   },

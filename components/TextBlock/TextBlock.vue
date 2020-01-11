@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" :style="`background-color:${background ? background : blok.color}; height: ${height ? height: 'auto'}; ${padding && 'padding: ' + padding}`" v-html="html" class="TextBlock text-center p-4 whitespace-normal" />
+  <div v-editable="blok" :style="`background-color:${background ? background : blok.color}; height: ${height ? height: 'auto'}; ${padding && 'padding: ' + padding}; color: ${blok.textColor ? blok.textColor.color: ''};`" v-html="html" class="TextBlock text-center p-4 whitespace-normal lg:mx-10" />
 </template>
 <script>
 import { markedToHTML } from '~/helpers/marked'
@@ -21,9 +21,6 @@ export default {
 <style>
 ul > li {
   list-style-type: none;
-}
-strong {
-  color: #757575;
 }
 p {
   overflow-y: hidden;

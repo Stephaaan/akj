@@ -12,7 +12,6 @@
   </div>
 </template>
 <script>
-// TODO: recreate
 export default {
   data () {
     return {

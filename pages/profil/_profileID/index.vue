@@ -27,7 +27,6 @@ export default {
     this.$storyapi.get(link, {
       version: 'draft'
     }).then((data) => {
-      console.log(data.data.story.content)
       this.content = data.data.story.content
     })
   },

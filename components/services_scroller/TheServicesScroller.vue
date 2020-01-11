@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-full hidden sm:flex font-worksans font-semibold items-center border-totalLightGray border-b">
     <img @click="swipeLeft" src="~/assets/imgs/icons/arrow_left.svg" alt="icon_left" class="h-6">
-    <div id="scroller" ref="scroller" v-if="scrollerData" class="flex my-2 text-textPink text-sm overflow-hidden">
+    <div id="scroller" ref="scroller" v-if="scrollerData" class="flex my-6 text-textPink text-sm overflow-hidden">
       <div v-bind:key="item.name" v-for="item in scrollerData" class="uppercase h-auto text-center flex justify-center items-center" style="min-width: 450px;">
         <nuxt-link :to="`/sluzby/${item.slug}`">{{ item.name }}</nuxt-link>
       </div>
