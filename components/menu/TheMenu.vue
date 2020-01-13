@@ -19,16 +19,24 @@
       </div>
     </div>
     <div id="hamburger_icon" class="px-8 md:hidden flex items-end flex-col relative">
-      <img
-        :click="toggleHamburger()"
-        class="w-12"
-        src="~/assets/imgs/icons/hamburger.svg"
-        alt="menu"
-      >
+      <div v-on:click.prevent="toggleHamburger">
+        <img
+          v-if="!hamburgerOpen"
+          class="w-12"
+          src="~/assets/imgs/icons/hamburger.svg"
+          alt="menu"
+        >
+        <img
+          v-if="hamburgerOpen"
+          class="w-8 m-2"
+          src="~/assets/imgs/icons/close.svg"
+          alt="menu"
+        >
+      </div>
       <div
         id="hamburger_body"
-        :style="hamburgerOpen ? 'display: flex' : 'display: none'"
-        class="bg-white w-screen pb-8 pt-24 pl-8 -z-1 top-0 hidden flex-col absolute right-0"
+        v-if="hamburgerOpen"
+        class="flex bg-white w-screen pb-8 pt-24 pl-8 -z-1 top-0 flex-col absolute right-0"
       >
         <div v-for="link in links" v-bind:key="link.link" class="cursor-pointer">
           <nuxt-link :to="link.link">
@@ -58,7 +66,7 @@ export default {
       activeClass: 'border-textPink border-b border-solid',
       links: [
         {
-          text: 'nu.about',
+          text: 'menu.about',
           link: 'o-nas'
         },
         {
@@ -85,13 +93,18 @@ export default {
       hamburgerOpen: false
     }
   },
+  watch: {
+    $route () {
+      this.hamburgerOpen = false
+    }
+  },
   methods: {
     switchLang (lang) {
       this.$store.commit(actionTypes.SET_LANG, lang)
     },
     toggleHamburger () {
-      console.log('toggle')
       this.hamburgerOpen = !this.hamburgerOpen
+      console.log(this.hamburgerOpen)
     }
   }
 }

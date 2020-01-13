@@ -2,10 +2,8 @@
   <div>
     <div v-if="about">
       <div v-editable="about">
-        <div class="w-full mt-8 text-center text-textPink text-title">
-          {{ about.title }}
-        </div>
-        <div v-html="markdownToHTML(about.text)" class="w-full px-20  my-8 py-4 font-worksans text-center text-gray" />
+        <!-- eslint-disable-next-line -->
+        <component v-for="(blok, index) in about.text" :key="index" :is="blok.component" :blok="blok"></component>
       </div>
     </div>
     <ThePhotoGrid />
@@ -15,9 +13,12 @@
 import marked from 'marked'
 import ThePhotoGrid from '../../components/photo_grid/ThePhotoGrid.vue'
 import { actionTypes } from '../../store/actionTypes'
+import Heading from '~/components/heading/Heading'
+import TextBlock from '~/components/TextBlock/TextBlock'
 export default {
   components: {
-    ThePhotoGrid
+    // eslint-disable-next-line
+    ThePhotoGrid, Heading, TextBlock
   },
   data () {
     return {
@@ -28,7 +29,7 @@ export default {
     this.$store.dispatch(actionTypes.GET_ABOUT_PAGE, this.$storyapi)
     this.$store.watch(
       (state, getters) => getters.about,
-      (newVal, oldVal) => { this.about = newVal }
+      (newVal, oldVal) => { this.about = newVal; console.log(newVal) }
     )
   },
   methods: {

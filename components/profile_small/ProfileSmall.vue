@@ -2,15 +2,15 @@
   <nuxt-link :to="'/profil/' + slug">
     <div v-editable="blok" class="flex h-48 sm:h-72 root items-center relative mb-4">
       <div :class="!blok.reversed ? 'justify-start' : 'justify-end'" :style="`background-color: ${blok.backgroundColor.color}` " class="w-full flex mb-2">
-        <div :style="blok.reversed && 'text-align: left'" class="w-2/3 sm:w-3/4 h-32 sm:h-64 mb-4 overflow-hidden whitespace-no-wrap text-overflow-dots text-right skewer">
-          <div>
+        <div :style="blok.reversed && 'text-align: left'" :class="blok.reversed?'mr-6':'ml-6'" class="w-2/3 sm:w-3/4 h-32 sm:h-64 mb-4 overflow-hidden whitespace-no-wrap text-overflow-dots text-right skewer">
+          <div :class="blok.reversed?'ml-2':'mr-2'">
             <div class="w-full mt-8 text-textPink text-base xs:text-2xl sm:text-3xl">
               {{ blok.name }}
             </div>
             <div class="w-full my-2  text-textPink text-sm xs:text-base sm:text-xl">
               {{ blok.profesion }}
             </div>
-            <div class="whitespace-normal text-sm overflow-hidden break-normal text-overflow-ellipsis h-32 hidden sm:block mr-4 text-gray">
+            <div class="whitespace-normal text-sm overflow-hidden break-normal text-overflow-ellipsis h-32 hidden sm:block text-gray">
               {{ blok.text }}
             </div>
           </div>
@@ -40,9 +40,6 @@ export default {
 }
 </script>
 <style scoped>
-.root > div > div > div{
-    margin: 0px
-}
 .text-overflow-dots {
   text-overflow: ellipsis
 }
@@ -54,6 +51,6 @@ export default {
   font-size: 1.20rem;
 }
 .skewer {
-  transform: skew(-9deg)
+  transform: skew(-8deg)
 }
 </style>
