@@ -9,7 +9,7 @@
     </div>
     <div class="flex flex-col w-90">
       <img src="~/assets/imgs/about_3.jpg" alt="about" class="mb-4">
-      <img src="~/assets/imgs/about_1.jpg" alt="about" >
+      <img src="~/assets/imgs/about_1.jpg" alt="about">
     </div>
   </div>
 </template>

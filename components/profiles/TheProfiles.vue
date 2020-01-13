@@ -1,5 +1,5 @@
 <template>
-  <div class="font-worksans mb-8" v-if="profiles">
+  <div v-if="profiles" class="font-worksans mb-8">
     <div v-for="(profile, index) in profiles" :key="index">
       <!-- eslint-disable-next-line -->
      <component v-if="profile.content.smallProfile"  :blok="profile.content.smallProfile[0]" :is="profile.content.smallProfile[0].component" :slug="profile.slug"/>

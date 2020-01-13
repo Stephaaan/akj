@@ -4,7 +4,7 @@
     <TheTitlePhoto />
     <TheServicesScroller />
     <nuxt />
-    <TheMap class="mb-8"/>
+    <TheMap class="mb-8" />
     <TheFooter />
   </div>
 </template>

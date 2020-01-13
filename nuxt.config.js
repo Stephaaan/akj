@@ -24,14 +24,14 @@ export default {
   ** Global CSS
   */
   css: [
-   '~/assets/leaflet/leaflet.css'
+    '~/assets/leaflet/leaflet.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {src: '~/plugins/vue-markdown-simple.js', ssr: false},
-    '~/plugins/i18n.js',
+    { src: '~/plugins/vue-markdown-simple.js', ssr: false },
+    '~/plugins/i18n.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -53,7 +53,7 @@ export default {
   ],
   router: {
     linkActiveClass: 'border-textPink border-b border-solid',
-    linkExactActiveClass: 'border-textPink border-b border-solid',
+    linkExactActiveClass: 'border-textPink border-b border-solid'
   },
   /*
   ** Build configuration

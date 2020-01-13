@@ -3,7 +3,9 @@
     <img @click="swipeLeft" src="~/assets/imgs/icons/arrow_left.svg" alt="icon_left" class="h-6">
     <div id="scroller" ref="scroller" v-if="scrollerData" class="flex my-6 text-textPink text-sm overflow-hidden">
       <div v-bind:key="item.name" v-for="item in scrollerData" class="uppercase h-auto text-center flex justify-center items-center" style="min-width: 450px;">
-        <nuxt-link :to="`/sluzby/${item.slug}`">{{ item.name }}</nuxt-link>
+        <nuxt-link :to="`/sluzby/${item.slug}`">
+          {{ item.name }}
+        </nuxt-link>
       </div>
     </div>
     <img @click="swipeRight" src="~/assets/imgs/icons/arrow_left.svg" alt="icon_right" class="h-6 icon_rotate">

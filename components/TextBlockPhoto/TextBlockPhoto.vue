@@ -1,15 +1,15 @@
 <template>
-    <div v-editable="blok" :style="`background-color: ${blok.backgroundColor.color}`" class="flex flex-col-reverse mdx:flex-row items-stretch relative">
-        <div class="mdx:w-2/3 lg:w-3/4">
-          <!-- eslint-disable-next-line -->
+  <div v-editable="blok" :style="`background-color: ${blok.backgroundColor.color}`" class="flex flex-col-reverse mdx:flex-row items-stretch relative">
+    <div class="mdx:w-2/3 lg:w-3/4">
+      <!-- eslint-disable-next-line -->
           <component v-for="(textBlok, index) in blok.text" v-bind:is="textBlok.component" :blok="textBlok" :key="index"/>
-        </div>
-        <div class="mdx:w-1/3 lg:w-1/4">
-          <div class="h-60 mdx:h-full w-full min-w-full mdx:min-h-full top-0 bottom-0" :style="backgroundStyle">
-            &nbsp;
-          </div>
-        </div>
     </div>
+    <div class="mdx:w-1/3 lg:w-1/4">
+      <div :style="backgroundStyle" class="h-60 mdx:h-full w-full min-w-full mdx:min-h-full top-0 bottom-0">
+            &nbsp;
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 import { markedToHTML } from '~/helpers/marked'
