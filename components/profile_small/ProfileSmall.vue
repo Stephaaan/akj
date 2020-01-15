@@ -33,9 +33,6 @@ export default {
   props: {
     blok: Object,
     slug: String
-  },
-  mounted () {
-    console.log('blok', this.blok)
   }
 }
 </script>

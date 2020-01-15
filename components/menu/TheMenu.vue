@@ -1,3 +1,6 @@
+<!--
+  SAFE TO DELETE
+ -->
 <template>
   <div class="font-worksans text-sm uppercase text-textPink">
     <div class="px-8 justify-between w-550 text hidden md:flex">
@@ -103,8 +106,7 @@ export default {
       this.$store.commit(actionTypes.SET_LANG, lang)
     },
     toggleHamburger () {
-      this.hamburgerOpen = !this.hamburgerOpen
-      console.log(this.hamburgerOpen)
+      this.hamburgerOpen = !this.hamburgerOpennpm 
     }
   }
 }
