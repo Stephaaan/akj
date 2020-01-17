@@ -9,7 +9,7 @@
     <div v-if="settings" v-editable="settings" class="w-100 flex flex-col sm:flex-row items-center justify-center my-8">
       <div class="flex flex-col sm:flex-row sm:mr-8">
         <div class="flex justify-center mb-4 sm:mb-0 sm:mr-8 items-center">
-          <img class="h-20" src="~/assets/imgs/icons/location.png" alt="location">
+          <img class="h-12 sm:h-20" src="~/assets/imgs/icons/location.png" alt="location">
         </div>
         <div class="flex flex-col items-center">
           <div class="max-w-3xs sm:max-w-2xs text-base sm:text-xl text-center">

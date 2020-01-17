@@ -29,7 +29,7 @@ export default {
     this.$store.dispatch(actionTypes.GET_ABOUT_PAGE, this.$storyapi)
     this.$store.watch(
       (state, getters) => getters.about,
-      (newVal, oldVal) => { this.about = newVal; console.log(newVal) }
+      (newVal, oldVal) => { this.about = newVal }
     )
   },
   methods: {

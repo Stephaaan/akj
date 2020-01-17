@@ -13,7 +13,7 @@ module.exports = {
     },
     colors: {
       transparent: 'transparent',
-
+      blackOpacity: 'rgba(0,0,0,.75)',
       black: '#000',
       white: '#ffffff',
       bgLight: '#f0f0f0',

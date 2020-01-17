@@ -8,3 +8,6 @@
 * {
   box-sizing: border-box;
 }
+.leaflet-top, .leaflet-bottom {
+    z-index: 40 !important;
+}

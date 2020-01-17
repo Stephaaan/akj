@@ -10,15 +10,15 @@
             <div class="w-full my-2  text-textPink text-sm xs:text-base sm:text-xl">
               {{ blok.profesion }}
             </div>
-            <div class="whitespace-normal text-sm overflow-hidden break-normal text-overflow-ellipsis h-32 hidden sm:block text-gray">
-              {{ blok.text }}
-            </div>
+            <!--      <div class="whitespace-normal text-sm overflow-hidden break-normal text-overflow-ellipsis h-32 hidden sm:block text-gray">
+              {{ blok.text }} -->
           </div>
         </div>
       </div>
-      <div :class="!blok.reversed && 'right-0'" class="w-1/3 sm:w-1/4 flex justify-center absolute sm:-top-12">
-        <img :src="blok.Photo" alt="Photo" class="h-40 sm:h-80">
-      </div>
+    </div>
+    <div :class="!blok.reversed && 'right-0'" class="w-1/3 sm:w-1/4 flex justify-center absolute sm:-top-12">
+      <img :src="blok.Photo" alt="Photo" class="h-40 sm:h-80">
+    </div>
     </div>
   </nuxt-link>
 </template>
@@ -33,9 +33,6 @@ export default {
   props: {
     blok: Object,
     slug: String
-  },
-  mounted () {
-    console.log('blok', this.blok)
   }
 }
 </script>
