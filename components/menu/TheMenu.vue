@@ -106,7 +106,7 @@ export default {
       this.$store.commit(actionTypes.SET_LANG, lang)
     },
     toggleHamburger () {
-      this.hamburgerOpen = !this.hamburgerOpennpm 
+      this.hamburgerOpen = !this.hamburgerOpennpm
     }
   }
 }
