@@ -75,11 +75,11 @@ export default {
     },
     swipeLeft () {
       const content = this.$refs.scroller
-      this.scrollTo(content, -300, 800)
+      this.scrollTo(content, -300, 500)
     },
     swipeRight () {
       const content = this.$refs.scroller
-      this.scrollTo(content, 300, 800)
+      this.scrollTo(content, 300, 500)
     }
   }
 }

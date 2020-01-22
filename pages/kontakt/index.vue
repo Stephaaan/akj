@@ -1,10 +1,10 @@
 <template>
   <div v-if="settings" class="font-worksans font-light my-8 flex flex-col items-center">
-    <div v-editable="settings">
+    <div v-editable="settings" class="w-full">
       <div class="w-full text-center text-textPink text-title mb-8">
         {{ $t("contact.title") }}
       </div>
-      <div class="flex flex-col mdx:flex-row mdx:justify-around mdx:items-center w-content mdx:w-full">
+      <div class="flex flex-col justify-center mdx:flex-row mdx:justify-around mdx:items-center w-content mdx:w-full">
         <div class="flex flex-row h-full w-full justify-center w-content mdx:w-auto mb-8">
           <div class="flex justify-center items-center mr-2">
             <img class="h-20" src="~/assets/imgs/icons/location_pink.png" alt="location">
@@ -51,7 +51,7 @@
             </div>
           </div>
         </div>
-        <div class="flex h-full flex-col justify-around font-hairline h-full w-content mb-8">
+        <div class="flex h-full flex-col justify-around font-hairline text-gray font-hairline font-worksansLight text-base mdx:text-xl h-full w-content mb-8">
           <div class="flex flex-row my-2">
             <div>
               <img class="h-8 mr-2" src="~/assets/imgs/icons/facebook_pink.png" alt="" srcset="">

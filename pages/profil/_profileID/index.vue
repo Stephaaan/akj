@@ -1,8 +1,12 @@
 <template>
   <div v-if="content" class="mb-8">
-    <div v-editable="content">
+    <div v-editable="content" class="hidden md:block">
       <!-- eslint-disable-next-line -->
       <component v-for="(blok, index) in content.text" v-bind:is="blok.component" :blok="blok" :key="index"/>
+    </div>
+    <div v-editable="content" class="block md:hidden">
+      <!-- eslint-disable-next-line -->
+      <component v-for="(blok, index) in content.mobileText" v-bind:is="blok.component" :blok="blok" :key="index"/>
     </div>
   </div>
 </template>
@@ -11,10 +15,11 @@ import marked from 'marked'
 import Heading from '~/components/heading/Heading'
 import TextBlock from '~/components/TextBlock/TextBlock'
 import TextBlockPhoto from '~/components/TextBlockPhoto/TextBlockPhoto'
+import TitleHeading from '~/components/title_heading/TitleHeading'
 export default {
   components: {
     // eslint-disable-next-line
-    Heading, TextBlock, TextBlockPhoto
+    Heading, TextBlock, TextBlockPhoto, TitleHeading
   },
   data () {
     return {
