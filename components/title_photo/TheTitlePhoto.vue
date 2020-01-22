@@ -2,11 +2,11 @@
   <div class="w-full max-w-full sm:h-550 h-80">
     <div v-if="settings" v-editable="settings" class="w-full sm:h-550 h-80 relative">
       <img :src="settings.page_title_photo" width="auto" height="320" class="h-full w-full object-cover block" alt="Titulna fotka">
-      <div v-html="settings.page_title" class="absolute bottom-100 sm:bottom-180 right-10 sm:right-40 text-white font-worksans text-3xl sm:text-6xl" />
-      <div class="absolute font-worksansLight text-center hidden sm:bottom-100 sm:block text-white w-80 right-10 sm:right-40">
+      <div v-html="settings.page_title" class="absolute bottom-100 sm:bottom-180 right-10 sm:right-40 text-white font-worksans text-3xl sm:text-6xl left-40 sm:left-auto" />
+      <div class="absolute font-worksansLight text-center hidden sm:bottom-100 sm:block text-white w-80 left-40 sm:right-40 sm:left-auto">
         {{ settings.page_subtitle }}
       </div>
-      <div class="absolute hidden sm:bottom-40 justify-around sm:flex w-64 sm:right-60">
+      <div class="absolute hidden left-60 sm:bottom-40 justify-around sm:flex w-64 sm:right-60 sm:left-auto">
         <a :href="settings.facebook_link.url" target="_blank" class="cursor-pointer">
           <img src="~/assets/imgs/icons/facebook_pink.png" alt="fb" class="w-8">
         </a>

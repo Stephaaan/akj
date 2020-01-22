@@ -6,8 +6,14 @@
 <script>
 export default {
   props: {
-    blok: Object,
-    margin: String
+    blok: {
+      type: Object,
+      default: () => ({})
+    },
+    margin: {
+      type: String,
+      default: ''
+    }
   }
 }
 </script>
