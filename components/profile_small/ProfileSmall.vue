@@ -30,8 +30,8 @@
               </div>
             </div>
           </div>
-          <div>
-            <img :class="blok.reversed ? 'rotate180 mr-2 xl:mr-8' : 'ml-2 xl:ml-8'" src="~/assets/imgs/icons/arrow_white.png" class="w-16 sm:w-24">
+          <div :class="blok.reversed ? 'mr-4 xl:mr-8' : 'ml-4 xl:ml-8'">
+            <img :class="blok.reversed ? '' : ' rotate180'" src="~/assets/imgs/icons/arrow_white.png" class="w-16 sm:w-24">
           </div>
         </div>
         <div
