@@ -6,7 +6,7 @@
         :style="`background-color: ${blok.backgroundColor.color}` "
         class="w-full flex mb-2"
       >
-        <div :class="!blok.reversed && 'flex-row-reverse'" class="flex w-2/3 sm:w-3/4 items-center">
+        <div :class="!blok.reversed && 'flex-row-reverse'" class="flex w-3/4 sm:w-3/4 items-center">
           <div
             :style="blok.reversed && 'text-align: left'"
             :class="blok.reversed?'sm:mr-6 justify-start':'sm:ml-6 justify-end'"
@@ -36,7 +36,7 @@
         </div>
         <div
           :class="!blok.reversed ? 'right-0': 'left-0'"
-          class="w-1/3 sm:w-1/4 flex justify-center absolute top-10 sm:-top-20"
+          class="w-1/4 sm:w-1/4 flex justify-center absolute top-10 sm:-top-20"
         >
           <img :src="blok.Photo" alt="Photo" class="h-40 sm:h-80">
         </div>
