@@ -40,7 +40,9 @@ export const actions = {
           content: item.content,
           slug: item.slug
         }
-      }).sort((i, j) => i.order - j.order))
+      }).sort((i, j) => {
+        return i.content.order - j.content.order
+      }))
     })
   },
   [actionTypes.GET_ABOUT_PAGE]: ({ commit, getters }, $storyapi) => {
