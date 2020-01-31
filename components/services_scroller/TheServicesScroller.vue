@@ -2,7 +2,7 @@
   <div
     class="max-w-full text-xs sm:text-base flex font-worksans font-semibold items-center border-totalLightGray border-b"
   >
-    <img @click="swipeLeft" src="~/assets/imgs/icons/arrow_left.svg" alt="icon_left" class="ml-2 cursor-pointer h-6">
+    <img @click="swipeLeft" src="~/assets/imgs/icons/arrow_left.svg" alt="icon_left" class="ml-2 sm:ml-6 cursor-pointer h-6">
     <div
       id="scroller"
       ref="scroller"
@@ -24,7 +24,7 @@
       @click="swipeRight"
       src="~/assets/imgs/icons/arrow_left.svg"
       alt="icon_right"
-      class="h-6 ml-2 icon_rotate cursor-pointer"
+      class="h-6 mr-2 sm:mr-6 icon_rotate cursor-pointer"
     >
   </div>
 </template>

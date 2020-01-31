@@ -4,7 +4,7 @@
       <div class="w-full text-center text-textPink text-title mb-8">
         {{ $t("contact.title") }}
       </div>
-      <div class="flex flex-col justify-center mdx:flex-row mdx:justify-around mdx:items-center w-content mdx:w-full">
+      <div class="flex flex-col justify-center mdx:flex-row mdx:justify-around mdx:items-center w-content mdx:w-full mx-auto items-center">
         <div class="flex flex-row h-full w-full justify-center w-content mdx:w-auto mb-8">
           <div class="flex justify-center items-center mr-2">
             <img class="h-20" src="~/assets/imgs/icons/location_pink.png" alt="location">
