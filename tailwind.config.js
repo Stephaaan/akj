@@ -258,7 +258,8 @@ module.exports = {
       ],
       worksans: ['work-sans', 'sans-serif'],
       worksansLight: ['Open Sans', 'sans-serif'],
-      satisfy: ['Satisfy', 'sans-serif']
+      satisfy: ['Satisfy', 'sans-serif'],
+      vibes: ['Great Vibes', 'cursive']
     },
     fontSize: {
       xs: '0.75rem',
