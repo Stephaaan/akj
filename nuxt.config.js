@@ -1,4 +1,4 @@
-
+import  axios from 'axios'
 export default {
   mode: 'spa',
   /*
@@ -74,6 +74,16 @@ export default {
           }
         })
       }
+    }
+  },
+  generate: {
+    routes () {
+      return [
+        '/profil/juhas',
+        '/profil/szaboova',
+        '/profil/brandoburova',
+        '/profil/halaburkova'
+      ]
     }
   }
 }
