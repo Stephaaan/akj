@@ -46,7 +46,7 @@
               id="hamburger_body"
               v-if="hamburgerOpen"
               v-on:click.prevent="closeHamburger"
-              class="flex w-screen h-screen bg-blackOpacity flex-col z-50 fixed right-0 top-80"
+              class="flex text-lg w-screen h-screen bg-blackOpacity flex-col z-50 fixed right-0 top-80"
             >
               <div v-on:click.prevent class="w-full px-8 bg-white opacity-100 pb-8 pt-8">
                 <div v-for="link in links" v-bind:key="link.link" class="cursor-pointer">

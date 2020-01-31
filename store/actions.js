@@ -62,7 +62,6 @@ export const actions = {
         .map(({ slug, content }) => ({ slug, content }))
         .map((blok) => {
           const newBlok = blok.content.order ? blok : { ...blok, content: { ...blok.content, order: 99999 } }
-          // console.log(blok, newBlok)
           return newBlok
         })
         .sort((blok, blok2) => {
