@@ -78,11 +78,13 @@ export default {
   },
   generate: {
     routes () {
+      const services = ['/sluzby/ostatne-pravne-suzby', '/sluzby/nahrada-skody-na-zdravi', '/sluzby/spracovanie-zmluv-a-dohod', '/sluzby/e-commerce', '/sluzby/zakladanie-a-spravovanie-obchodnych-spolocnosti', '/sluzby/servis-autorskych-prav', '/sluzby/pracovnopravny-servis', '/sluzby/danovo-pravny-servis', '/sluzby/pravne-analyzy', '/sluzby/zastupovanie-pred-organmi-verejnej-spravy', '/sluzby/ekonomicko-pravna-optimalizacia', '/sluzby/ochrana-pred-nekalou-sutazou', '/sluzby/rodinne-pravo', '/sluzby/zastupovanie-pred-sudmi']
       return [
         '/profil/juhas',
         '/profil/szaboova',
         '/profil/brandoburova',
-        '/profil/halaburkova'
+        '/profil/halaburkova',
+        ...services
       ]
     }
   }
