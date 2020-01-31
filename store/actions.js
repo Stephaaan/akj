@@ -58,7 +58,16 @@ export const actions = {
       version: 'draft',
       starts_with: getters.lang !== 'sk' ? `en/services` : `services`
     }).then((data) => {
-      commit(actionTypes.GET_SERVICES_SUCCESS, data.data.stories.map(({ slug, content }) => ({ slug, content })))
+      commit(actionTypes.GET_SERVICES_SUCCESS, data.data.stories
+        .map(({ slug, content }) => ({ slug, content }))
+        .map((blok) => {
+          const newBlok = blok.content.order ? blok : { ...blok, content: { ...blok.content, order: 99999 } }
+          // console.log(blok, newBlok)
+          return newBlok
+        })
+        .sort((blok, blok2) => {
+          return (blok?.content?.order || 99999) - blok2?.content?.order
+        }))
     })
   }
 }

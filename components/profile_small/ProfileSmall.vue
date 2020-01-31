@@ -31,7 +31,7 @@
             </div>
           </div>
           <div :class="blok.reversed ? 'mr-4 xl:mr-8' : 'ml-4 xl:ml-8'">
-            <img :class="blok.reversed ? '' : ' rotate180'" src="~/assets/imgs/icons/arrow_white.png" class="w-16 sm:w-24">
+            <img :class="blok.reversed ? '' : ' rotate180'" src="~/assets/imgs/icons/arrow_white.png" class="w-10 sm:w-12">
           </div>
         </div>
         <div

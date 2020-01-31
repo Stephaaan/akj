@@ -44,7 +44,7 @@ export default {
 </script>
 <style>
   h1 {
-    margin: 2rem 0 !important;
+    margin: 1.5rem 0 !important;
     color: #af0d45 !important;
     font-size: 30px;
   }

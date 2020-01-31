@@ -5,7 +5,7 @@
   >
     <div class="relative w-full flex justify-between no-link-border">
       <nuxt-link to="/">
-        <img class="px-8 h-12 md:h-20 cursor-pointer " src="~/assets/imgs/logo.png" alt="logo">
+        <img class="pr-8 h-12 md:h-20 cursor-pointer " src="~/assets/imgs/logo.png" alt="logo">
       </nuxt-link>
       <div>
         <div class="font-worksans text-sm uppercase text-textPink">

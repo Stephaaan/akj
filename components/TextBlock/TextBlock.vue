@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" :style="`background-color:${background ? background : blok.color}; height: ${height ? height: 'auto'}; ${padding && 'padding: ' + padding}; color: ${blok.textColor ? blok.textColor.color: ''};`" v-html="html" class="TextBlock text-center p-4 whitespace-normal lg:mx-10" />
+  <div v-editable="blok" :style="`background-color:${background ? background : blok.color}; ${blok.TextAlign && 'text-align:' + blok.TextAlign + ';'} height: ${height ? height: 'auto'}; ${padding && 'padding: ' + padding}; color: ${blok.textColor ? blok.textColor.color: ''};`" v-html="html" class="TextBlock text-center p-4 whitespace-normal lg:mx-10" />
 </template>
 <script>
 import { markedToHTML } from '~/helpers/marked'
