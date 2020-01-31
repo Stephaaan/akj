@@ -3,7 +3,7 @@
     <div v-if="settings" v-editable="settings" class="w-full sm:h-550 h-80 relative">
       <img :src="settings.page_title_photo" width="auto" height="320" class="h-full w-full object-cover block" alt="Titulna fotka">
       <div id="title_photo_after" />
-      <div v-html="settings.page_title" class="absolute bottom-100 sm:bottom-180 w-full text-center sm:w-auto sm:right-40 text-white font-worksans text-3xl sm:text-6xl" />
+      <div v-html="settings.page_title" class="absolute bottom-40 sm:bottom-180 w-full text-center sm:w-auto sm:right-40 text-white font-worksans text-3xl sm:text-6xl" />
       <div class="absolute font-worksansLight text-center hidden sm:bottom-100 sm:block text-white w-80 left-40 sm:right-40 sm:left-auto">
         {{ settings.page_subtitle }}
       </div>
@@ -47,6 +47,6 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.3)
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5))
 }
 </style>
