@@ -25,8 +25,11 @@ export const actions = {
       commit(actionTypes.GET_SERVICES_SCROLLER_DATA_SUCCESS, data.data.stories.map((item) => {
         return {
           name: item.content.heading,
+          order: item.content.order,
           slug: item.slug
         }
+      }).sort((blok, blok2) => {
+        return (blok?.order || 99999) - blok2?.order
       }))
     })
   },
