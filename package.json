@@ -15,7 +15,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "leaflet": "^1.6.0",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "nuxt": "^2.0.0",
     "nuxt-i18n": "^6.4.1",
     "storyblok-nuxt": "^1.0.2",
